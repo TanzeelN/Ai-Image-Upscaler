@@ -11854,5 +11854,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.bg-indigo-800 {
+  background-color: rgb(40.8, 6.4, 96.8);
+}
+
+.bg-indigo-pale {
+  background-color: #eef0fb;
+}
 
 /*# sourceMappingURL=custom.css.map */
