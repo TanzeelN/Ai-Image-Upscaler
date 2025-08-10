@@ -37,21 +37,60 @@
         </video>
       </div>
 
-      <!-- Images -->
+      <!-- Images Column -->
       <div class="col-sm-8">
-      <div class="d-flex gap-3" style="height: 741px; align-items: center;">
-        <a href="assets/images/BeeInput.JPG" class="glightbox" data-gallery="images" style="flex: 1;">
-          <img src="assets/images/BeeInput.JPG" alt="Bee Input" style="max-height: 741px; width: 100%; object-fit: contain;" />
-        </a>
-        <a href="assets/images/BeeOuput.jpg" class="glightbox" data-gallery="images" style="flex: 1;">
-          <img src="assets/images/BeeOuput.jpg" alt="Bee Output" style="max-height: 741px; width: 100%; object-fit: contain;" />
-        </a>
-      </div>
-    </div>
+        <div class="d-flex gap-3" style="height: 741px; align-items: center;">
+          <a href="assets/images/Model Selection.png" class="glightbox" data-gallery="images" style="flex: 1; position: relative; display: block;">
+            <img src="assets/images/Model Selection.png" alt="Bee Input" style="max-height: 741px; width: 100%; object-fit: contain;" />
+            <div style="
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              background-color: rgba(0,0,0,0.6);
+              color: white;
+              text-align: center;
+              padding: 5px 0;
+              font-size: 0.9rem;
+              font-weight: 600;
+            ">
+              Click to view other images
+            </div>
+          </a>
+          <a href="assets/images/BeeInput.jpg" class="glightbox" data-gallery="images" style="flex: 1;">
+            <img src="assets/images/BeeInput.jpg" alt="Bee Output" style="max-height: 741px; width: 100%; object-fit: contain;" />
+          </a>
+        </div>
 
-      
+        <!-- Hidden extra images for slideshow -->
+        <a href="assets/images/BeeOuput.jpg" class="glightbox" data-gallery="images" style="display:none;"></a> 
+        <a href="assets/images/Model Output.png" class="glightbox" data-gallery="images" style="display:none;"></a>
+        <a href="assets/images/Processing Image.png" class="glightbox" data-gallery="images" style="display:none;"></a>
+        <a href="assets/images/Saving Image.png" class="glightbox" data-gallery="images" style="display:none;"></a>
+      </div>
+
     </div>
   </div>
+
+  <div class="container-fluid mt-3 mb-2">
+    <h2 class="fw-bold">Project Summary</h2>
+    <p>This project was to make an easy & efficient way to enhance blurry images using iOS. This includes:</p>
+    <ul class="text-start" style="list-style-type: disc; padding-left: 1.5rem;">
+      <li>A react-native front-end which allows image & model selection</li>
+      <li>An AWS S3 Bucket for transferring images between the front-end & the replicate API</li>
+      <li>Three AWS Lambda Functions to process & return the image to the front-end</li>
+      <li>Secure integration between AWS Services and the React Native App</li>
+    </ul>
+
+    <h2 class="fw-bold">Project Reflections & Improvements</h2>
+    <p> This project allowed me to learn tech stacks which I was unfamiliar with e.g. Python, Java, AWS Services, APIs, HTML & CSS. <br>
+      While, there is more to do, the app is at a functional stage with all the other components integrated. <br> 
+      <strong>This Project Site is still uncompleted.</strong></p>
+  </div>
+
+
+
+
+
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
