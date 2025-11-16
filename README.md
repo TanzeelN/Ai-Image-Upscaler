@@ -4,9 +4,12 @@
 To develop an IOS application which allows the use of Artificial Intelligence to upscale images.
 
 **Example execution of the prototype application**
-<video src="assets/videos/Demo.mp4" width="50%" controls>
+<video width="600" controls>
+  <source src="https://raw.githubusercontent.com/TanzeelN/Ai-Image-Upscaler/main/assets/videos/Demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+
 
 **Example Images Enahnced**
 
