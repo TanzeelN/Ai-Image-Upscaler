@@ -15,17 +15,19 @@
 <body class="bg-indigo-pale">
 
   <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg" style="background-color: #3730a3;">
     <div class="container-fluid">
       <a class="navbar-brand text-white">AI Image Enhancer Project (React Native + AWS)</a>
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item me-2"><a class="nav-link text-white" href="#">Home</a></li>
+        <!--<li class="nav-item me-2"><a class="nav-link text-white" href="#">Home</a></li>
         <li class="nav-item me-2"><a class="nav-link text-white" href="#">About</a></li>
         <li class="nav-item me-2"><a class="nav-link text-white" href="#">CV</a></li>
-        <li class="nav-item me-2"><a class="nav-link text-white" href="#">Portfolio</a></li>
+        <li class="nav-item me-2"><a class="nav-link text-white" href="#">Portfolio</a></li>-->
       </ul>
     </div>
   </nav>
+
   
   <div class="container mt-3">
     <div class="row">
@@ -71,21 +73,59 @@
     </div>
   </div>
 
-  <div class="container-fluid mt-3 mb-2">
-    <h2 class="fw-bold">Project Summary</h2>
-    <p>This project was to make an easy & efficient way to enhance blurry images using iOS. This includes:</p>
-    <ul class="text-start" style="list-style-type: disc; padding-left: 1.5rem;">
-      <li>A react-native front-end which allows image & model selection</li>
-      <li>An AWS S3 Bucket for transferring images between the front-end & the replicate API</li>
-      <li>Three AWS Lambda Functions to process & return the image to the front-end</li>
-      <li>Secure integration between AWS Services and the React Native App</li>
-    </ul>
+<h2>Project Statement</h2>
+<p>Developed an iOS application leveraging Artificial Intelligence to upscale images.</p>
 
-    <h2 class="fw-bold">Project Reflections & Improvements</h2>
-    <p> This project allowed me to learn tech stacks which I was unfamiliar with e.g. Python, Java, AWS Services, APIs, HTML & CSS. <br>
-      While, there is more to do, the app is at a functional stage with all the other components integrated. <br> 
-      <strong>This Project Site is still uncompleted.</strong></p>
-  </div>
+<h2>Project Requirements</h2>
+<ul>
+  <li>User-friendly input/output image stream on iOS.</li>
+  <li>Selection of multiple AI models for image upscaling.</li>
+  <li>API hosting image-enhancing models with server-side execution.</li>
+  <li>Use of AWS (Lambda Functions, S3, DynamoDB) for fast, scalable image transfer between the user and the API.</li>
+  <li>Automatic deletion of images after processing for data privacy.</li>
+</ul>
+
+<h2>Previous Challenges & Changes</h2>
+<p>Initially, the application design relied on an E3 AWS server to:</p>
+<ul>
+  <li>Store images</li>
+  <li>Run a prebuilt upscaling model</li>
+  <li>Send output back to the user</li>
+  <li>Execute cleanup tasks</li>
+</ul>
+<p>However, this approach was not feasible due to high computation requirements of AI models, leading to scalability and cost issues.</p>
+
+<p>The revised solution uses AWS Lambda, S3, and DynamoDB to generate secure pre-signed URLs for fast data transfer. Additionally, the application leverages the Replicate API, which specializes in server-side AI model execution, making the upscaling process faster, cheaper, and more scalable.</p>
+
+<p>This approach improved security, ensured efficient communication between the user and the server, and created a scalable processing pipeline.</p>
+
+<h2>Tech Stack</h2>
+
+<h3>Front-End (React Native)</h3>
+<ul>
+  <li>Mobile app framework for iOS.</li>
+  <li>Handles image input and model selection.</li>
+  <li>Requests a pre-signed URL from the backend to upload images.</li>
+  <li>Receives the upscaled image and allows users to compare it with the original.</li>
+</ul>
+
+<h3>Back-End (Python)</h3>
+<ul>
+  <li>Generates pre-signed URLs for image uploads.</li>
+  <li>Detects when images are uploaded to S3 and triggers the Replicate API for upscaling.</li>
+  <li>Stores request metadata in DynamoDB for tracking.</li>
+  <li>Sends the processed image back to the iOS application.</li>
+</ul>
+
+<h2>Additional Resources</h2>
+<ul>
+  <li>AWS: Lambda, S3, DynamoDB for 24/7 availability, low-cost maintenance, and scalability.</li>
+  <li>Replicate API: Provides access to a library of AI models for image enhancement.</li>
+  <li>Postman: Testing API calls and cloud interactions.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>The application was successfully built as a prototype. All core functionalities work, though the UI requires aesthetic improvements. A key challenge was managing React Native updates, which occasionally introduced breaking changes, requiring frequent syntax adjustments.</p>
 
 
 
